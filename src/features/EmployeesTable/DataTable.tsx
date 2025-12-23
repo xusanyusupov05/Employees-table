@@ -21,6 +21,7 @@ export const columns = (
       return shouldShowCheckbox ? (
         <Checkbox
           checked={isChecked}
+          
           onChange={(e) => {
             if (e.target.checked) {
               setSelectedIds([...selectedIds, record.id]);
@@ -67,14 +68,14 @@ export const columns = (
         {typeof text === "boolean" ? (
           text ? (
             <Button
-              className="bg-[#DBF9CE] rounded-full flex items-center inter hover:!bg-[#DBF9CE] hover:!text-black "
+              className="bg-[#DBF9CE] flex items-center inter hover:!bg-[#DBF9CE] hover:!text-black "
             >
               <CheckOutlined />
               Active
             </Button>
           ) : (
             <Button 
-              className="bg-[#EDF5FF] rounded-full flex items-center inter text-[#2B74FE] hover:!bg-[#EDF5FF] hover:!text-[#2B74FE]"
+              className="bg-[#EDF5FF] flex items-center inter text-[#2B74FE] hover:!bg-[#EDF5FF] hover:!text-[#2B74FE]"
             >
               <HeartOutlined />
               Vacation
